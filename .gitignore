@@ -1,2 +1,3 @@
 ttsite/static/stylesheets/styles.css
-ttsite/__pycache__/*
+ttsite/__pycache__/
+ttsite/.sass-cache/
