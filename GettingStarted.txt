@@ -1,0 +1,34 @@
+Prerequisites:
+
+You need to have
+Python3
+Django
+Sass and Compass installed. 
+Bootstrap-Sass
+
+gem install sass
+gem install compass
+gem install bootstrap-sass
+
+Install Django as per the instructions here
+
+https://docs.djangoproject.com/en/1.9/topics/install/
+
+Getting Started:
+
+First up get the source code
+
+git clone https://github.com/annaqui/ttsite
+git pull
+
+The commmand
+
+compass compile 
+
+will generate the styles.css file for the site
+
+You can then run 
+
+python manage.py runserver 0.0.0.0:8080 
+
+This will start the app server on port 8080 and listen on all interfaces (So it can be accessed fromthe outside world)
