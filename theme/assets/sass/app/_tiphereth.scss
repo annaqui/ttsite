@@ -1,0 +1,21 @@
+/* Set backgrounds and styles for the about section of the home page*/
+div.about{
+	&#preserves {	  
+	  color: $grayscale-light;
+	  background: $grayscale-dark url(../images/products/chutney.jpg) no-repeat scroll center center;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  background-size: cover;
+	  -o-background-size: cover;
+		img{
+			height: width;
+		}
+	}
+
+
+	#logs {
+	}
+
+	#compost {
+	}
+}
