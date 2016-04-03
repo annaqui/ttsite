@@ -171,6 +171,7 @@ function init() {
 
     var myLatlng = new google.maps.LatLng(55.8996698, -3.2722241);
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    var image = "static/images/tiph-map-marker.png"
 
     var marker = new google.maps.Marker({
         position: myLatlng,
