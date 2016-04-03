@@ -11955,7 +11955,8 @@ function init() {
     var marker = new google.maps.Marker({
         position: myLatlng,
         animation: google.maps.Animation.DROP,
-        title:"Tiphereth"
+        title:"Tiphereth",
+        icon: image
     });
 
     marker.setMap(map); 

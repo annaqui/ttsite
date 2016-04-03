@@ -14620,6 +14620,15 @@ img::-moz-selection {
   background: transparent;
 }
 
-
-
-/*# sourceMappingURL=main.css.map */
+/* Set backgrounds and styles for the about section of the home page*/
+div.about#preserves {
+  color: #000;
+  background: #fff url(../images/products/chutney.jpg) no-repeat scroll center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+div.about#preserves img {
+  height: width;
+}
