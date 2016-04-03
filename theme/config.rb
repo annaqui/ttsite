@@ -3,7 +3,7 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "stylesheets"
-sass_dir = "sass"
+sass_dir = "assets/sass"
 images_dir = "images"
 javascripts_dir = "javascripts"
 
@@ -26,3 +26,5 @@ relative_assets = true
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+sourcemap = true

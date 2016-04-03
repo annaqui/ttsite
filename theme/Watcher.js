@@ -37,7 +37,7 @@ var paths = {
 };
 
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watchStyles', 'watchScripts']);
 
 gulp.task('styles', function() {
     return sass(paths.styles,{ sourcemap: true, style: 'expanded' })
@@ -47,6 +47,22 @@ gulp.task('styles', function() {
         .pipe(notify({ message: 'Styles task complete' }));
 });
 
-gulp.task('watch', function() {
+gulp.task('scripts', function() {
+    return gulp.src(paths.scripts)
+        .pipe(jshint('.jshintrc'))
+        .pipe(jshint.reporter('default'))
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(paths.scriptsOutput))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.scriptsOutput))
+        .pipe(notify({ message: 'Scripts task complete' }));
+});
+
+gulp.task('watchStyles', function() {
   gulp.watch('assets/sass/**/*.scss', ['styles']);
+});
+
+gulp.task('watchScripts', function() {
+  gulp.watch('assets/**/*.js', ['styles']);
 });

@@ -12,6 +12,7 @@
     "gulp-cache": "^0.2.8",
     "gulp-concat": "^2.5.2",
     "gulp-imagemin": "^2.2.1",
+    "gulp-install": "^0.6.0",
     "gulp-jshint": "^1.9.2",
     "gulp-minify-css": "^0.4.6",
     "gulp-notify": "^2.2.0",
