@@ -10,6 +10,9 @@ div.about{
 	padding-top: 100%; 	/* initial ratio of 1:1*/
 	}
 	/* End square image settings */
+	&:after{
+	}
+	/* End square image settings */
 		
 
 		&#preserves {	  
@@ -26,6 +29,7 @@ div.about{
 		}
 
 		div.info {
+		background: rgba(240, 240, 240, 0.5);
 		position:  absolute;
 		top: 0;
 		left: 0;
