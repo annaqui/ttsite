@@ -1,8 +1,8 @@
-static/stylesheets/styles.css
-static/stylesheets/styles.css.map
 static/stylesheets/main.css
 static/stylesheets/main.min.css
 static/javascripts/main.js
 static/javascripts/main.min.js
+assets/bower_components/
+node_modules/
 **/__pycache__/
 **/.sass-cache/

@@ -1,5 +1,8 @@
-/* File: gulpfile.js */
+/**
+ * Created by Meki on 2015.02.25..
+ */
 
+/* Get dependencies */
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     minifycss = require('gulp-minify-css'),
@@ -13,6 +16,7 @@ var gulp = require('gulp'),
     del = require('del'),
     sourcemaps = require('gulp-sourcemaps');
 
+/* Set paths */
 
 var paths = {
     /* Source paths */
@@ -21,7 +25,7 @@ var paths = {
         'assets/bower_components/jquery/dist/jquery.js',
         'assets/bower_components/jquery.easing/js/jquery.easing.js',
         'assets/bower_components/bootstrap/dist/js/bootstrap.js',
-        'assets/js/grayscale.js'
+        'assets/js/tiphereth.js'
     ],
     images: ['assets/images/**/*'],
     fonts: [
@@ -30,17 +34,15 @@ var paths = {
     ],
 
     /* Output paths */
-    stylesOutput: '../static/stylesheets',
-    scriptsOutput: '../static/javascripts',
-    imagesOutput: '../static/images',
-    fontsOutput: '../static/fonts'
+    stylesOutput: 'static/stylesheets',
+    scriptsOutput: 'static/javascripts',
+    imagesOutput: '.static/images',
+    fontsOutput: 'static/fonts'
 };
 
-
-gulp.task('default', ['watchStyles', 'watchScripts']);
-
+/* Tasks */
 gulp.task('styles', function() {
-    return sass(paths.styles,{ sourcemap: true, style: 'expanded' })
+    return sass(paths.styles,{sourcemap: true, style: 'expanded' })
         .pipe(gulp.dest(paths.stylesOutput))
 		.pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.stylesOutput))
@@ -59,10 +61,23 @@ gulp.task('scripts', function() {
         .pipe(notify({ message: 'Scripts task complete' }));
 });
 
-gulp.task('watchStyles', function() {
-  gulp.watch('assets/sass/**/*.scss', ['styles']);
+gulp.task('images', function() {
+    return gulp.src(paths.images)
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+        .pipe(gulp.dest(paths.imagesOutput))
+        .pipe(notify({ message: 'Images task complete' }));
 });
 
-gulp.task('watchScripts', function() {
-  gulp.watch('assets/**/*.js', ['styles']);
+gulp.task('fonts', function() {
+    return gulp.src(paths.fonts)
+    .pipe(gulp.dest(paths.fontsOutput))
+    .pipe(notify({ message: 'Fonts task complete', onLast: true }));
+});
+
+gulp.task('clean', function(cb) {
+    del([paths.stylesOutput, paths.scriptsOutput], cb)
+});
+
+gulp.task('default', ['clean'], function() {
+    gulp.start('styles', 'scripts', 'images', 'fonts');
 });

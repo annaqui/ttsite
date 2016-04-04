@@ -1,7 +1,7 @@
 {
-  "name": "grayscale-sass",
-  "version": "1.0.1",
-  "description": "The SASS version of StartBootstrap's Grayscale template, now with Gulp",
+  "name": "TipherethTrading",
+  "version": "1.0.0",
+  "description": "Tiphereth Trading Build Script",
   "main": "Gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -18,25 +18,20 @@
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^1.0.0-alpha.3",
-    "gulp-uglify": "^1.1.0"
+    "gulp-uglify": "^1.1.0",
+	"gulp-sourcemaps": "^1.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blackfyre/grayscale-sass.git"
+    "url": "https://github.com/annaqui/ttsite.git"
   },
-  "keywords": [
-    "grayscale",
-    "bootstrap",
-    "template",
-    "start bootstrap"
-  ],
-  "author": "Blackfyre",
+  "author": "annaqui",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/blackfyre/grayscale-sass/issues"
+    "url": "https://github.com/annaqui/ttsite/issues"
   },
-  "homepage": "https://github.com/blackfyre/grayscale-sass"
+  "homepage": "https://github.com/annaqui/ttsite"
 }
