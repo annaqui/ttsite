@@ -83,7 +83,7 @@ gulp.task('watchStyles', function() {
 });
 
 gulp.task('watchScripts', function() {
-  gulp.watch('assets/**/*.js', ['styles']);
+  gulp.watch('assets/**/*.js', ['scripts']);
 });
 
 gulp.task('default', ['clean'], function() {
