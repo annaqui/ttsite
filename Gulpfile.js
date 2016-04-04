@@ -78,6 +78,16 @@ gulp.task('clean', function(cb) {
     del([paths.stylesOutput, paths.scriptsOutput], cb)
 });
 
+gulp.task('watchStyles', function() {
+  gulp.watch('assets/sass/**/*.scss', ['styles']);
+});
+
+gulp.task('watchScripts', function() {
+  gulp.watch('assets/**/*.js', ['styles']);
+});
+
 gulp.task('default', ['clean'], function() {
     gulp.start('styles', 'scripts', 'images', 'fonts');
 });
+
+gulp.task('watch', ['watchStyles', 'watchScripts']);
